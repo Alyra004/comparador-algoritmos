@@ -1,18 +1,18 @@
 --- RESULTADOS GERAIS (TODOS OS LIVROS) ---
 Algoritmo;Ocorrencias Totais;Amostra 1 (ms);Amostra 2 (ms);Amostra 3 (ms);Media (ms)
-Serial CPU;1100;32,15;7,44;7,35;15,65
-Parallel CPU (Max);1100;112,18;3,88;4,31;40,12
-Parallel CPU (6 Threads);1100;4,32;3,53;4,82;4,22
-Parallel GPU;1100;126,86;73,01;72,43;90,77
+Serial CPU;1100;17,17;9,42;9,49;12,03
+Parallel CPU (Max);1100;64,07;5,55;3,11;24,24
+Parallel CPU (6 Threads);1100;3,24;3,60;3,22;3,35
+Parallel GPU;1100;77,12;73,82;80,92;77,29
 
 --- DETALHAMENTO POR LIVRO ---
 Livro;Algoritmo;Ocorrencias no Livro;Amostra 1 (ms);Amostra 2 (ms);Amostra 3 (ms);Media (ms)
-DonQuixote;Serial CPU;0;3,70;3,51;4,76;3,99
-DonQuixote;Parallel CPU;0;2,89;2,48;2,50;2,62
-DonQuixote;Parallel GPU;0;65,61;67,22;67,76;66,86
-Dracula;Serial CPU;1;2,27;2,30;2,36;2,31
-Dracula;Parallel CPU;1;1,65;2,66;1,79;2,04
-Dracula;Parallel GPU;1;71,93;75,75;72,33;73,33
-MobyDick;Serial CPU;1099;3,11;3,28;3,08;3,16
-MobyDick;Parallel CPU;1099;2,44;2,05;1,97;2,15
-MobyDick;Parallel GPU;1099;73,23;77,64;68,40;73,09
+DonQuixote;Serial CPU;0;4,51;5,15;5,20;4,95
+DonQuixote;Parallel CPU;0;2,67;2,53;2,76;2,65
+DonQuixote;Parallel GPU;0;75,13;71,09;69,99;72,07
+Dracula;Serial CPU;1;2,37;2,45;2,45;2,42
+Dracula;Parallel CPU;1;1,75;2,00;2,18;1,98
+Dracula;Parallel GPU;1;70,20;71,50;67,85;69,85
+MobyDick;Serial CPU;1099;3,40;3,30;3,33;3,35
+MobyDick;Parallel CPU;1099;1,71;1,87;1,73;1,77
+MobyDick;Parallel GPU;1099;68,53;70,43;72,77;70,58

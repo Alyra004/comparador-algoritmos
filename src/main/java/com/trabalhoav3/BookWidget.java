@@ -10,7 +10,7 @@ public class BookWidget extends JPanel {
     private final File arquivoReal;
     private final JTextField campoTitulo;
     private final JCheckBox chkSelecionado;
-    private Image imagemCapa; // Variável para segurar o seu render 3D
+    private Image imagemCapa;
 
     public BookWidget(File arquivo) {
         this.arquivoReal = arquivo;
@@ -18,11 +18,10 @@ public class BookWidget extends JPanel {
         setOpaque(false);
         setPreferredSize(new Dimension(180, 180));
 
-        // Tenta carregar a arte do livro (Sprite)
         try {
             imagemCapa = ImageIO.read(new File("capa.png"));
         } catch (Exception e) {
-            imagemCapa = null; // Se não achar, usaremos o fallback de código
+            imagemCapa = null;
         }
 
         JPanel capaLivro = new JPanel() {
@@ -33,13 +32,11 @@ public class BookWidget extends JPanel {
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
                 
                 if (imagemCapa != null) {
-                    // Desenha a sua imagem 3D renderizada!
                     g2.drawImage(imagemCapa, 15, 0, 140, 140, this);
                 } else {
-                    // Fallback: Desenho vetorial com cores Monokai (Azul Neon escurecido)
                     g2.setColor(new Color(102, 217, 239, 180)); 
                     g2.fillRoundRect(15, 0, 100, 140, 10, 10);
-                    g2.setColor(new Color(102, 217, 239)); // Lombada mais clara
+                    g2.setColor(new Color(102, 217, 239));
                     g2.fillRect(15, 0, 15, 140);
                 }
                 g2.dispose();
@@ -59,8 +56,8 @@ public class BookWidget extends JPanel {
         String nomeSemExtensao = arquivo.getName().replaceFirst("[.][^.]+$", "");
         campoTitulo = new JTextField(nomeSemExtensao);
         campoTitulo.setHorizontalAlignment(JTextField.CENTER);
-        campoTitulo.setFont(new Font("Consolas", Font.BOLD, 12)); // Fonte estilo código
-        campoTitulo.setForeground(new Color(248, 248, 242)); // Texto claro Monokai
+        campoTitulo.setFont(new Font("Consolas", Font.BOLD, 12));
+        campoTitulo.setForeground(new Color(248, 248, 242));
         campoTitulo.setBorder(new EmptyBorder(2, 2, 2, 2));
         campoTitulo.setOpaque(false);
         campoTitulo.setCaretColor(Color.WHITE);
