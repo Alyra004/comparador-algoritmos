@@ -25,6 +25,14 @@ O projeto utiliza o **Maven** como gerenciador de build. Para compilar e executa
 
 ```xml
 <dependencies>
+    <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
     <dependency>
         <groupId>org.jocl</groupId>
         <artifactId>jocl</artifactId>
